@@ -8,8 +8,8 @@ var dustbinImage, paperImage
 
 function preload(){
 
-  dustbingImage = loadImage ("dustbingreen.png")
   paperImage = loadImage("paper.png")
+  dustbinImage = loadImage("dustbingreen.png")
 
 }
 
@@ -25,7 +25,7 @@ function setup() {
 
   ground = new Ground(400, 680, 800, 20);
 
-  dustbin = createSprite(964,520,20,20);
+  dustbin = createSprite(610,595,20,20);
   dustbin.addImage(dustbinImage);
   dustbin.scale = 0.45;
 
@@ -45,14 +45,19 @@ function draw() {
   background(51,204,255);
   
   Engine.update(engine);
-  paper.display();
-  ground.display();
   dustbin1.display();
   dustbin2.display();
   dustbin3.display();
+  drawSprites();
+  paper.display();
+  ground.display();
+ 
+
+  
+  
   
 
-  drawSprites();
+  
  
 }
 
